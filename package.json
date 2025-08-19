@@ -1,0 +1,17 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "My blog",
+  "license": "ISC",
+  "author": "InTheVibe",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
