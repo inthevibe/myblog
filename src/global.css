@@ -144,3 +144,7 @@ main {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.color-secondary {
+  color: var(--text-secondary);
+}
