@@ -2,14 +2,8 @@
 layout: layout.html
 ---
 
-<header class="mb-12">
-  <nav class="text-2xl font-bold tracking-tight">
-    INTHEVIBEDEV
-  </nav>
-</header>
-
 <main class="space-y-6">
-  <section>
+  <section class="mb-12">
     <p class="text-justify">
       I’m a Computer Science student and web developer, passionate about tech since I was a kid. I’m enthusiastic about
       programming in general. When I’m not coding, I’m usually watching programming talks on YouTube, binging videos
@@ -19,23 +13,15 @@ layout: layout.html
   </section>
 
   <section>
-    <ul class="space-y-2">
+    <ul class="space-y-6 mt-12">
+      {% for post in collections.post %}
       <li>
-        <a href="/post-1" class="flex justify-between">
-          <span>My First Post</span>
-          <span class="date">2025.08.20</span>
+        <a class="flex justify-between" href="{{ post.url }}">
+          <span>{{ post.data.title }}</span>
+          <span class="date"> {{ post.data.date | date: "%B %d, %Y" }}</span>
         </a>
       </li>
-      <li>
-        <a href="/post-2" class="flex justify-between">
-          <span>Another Post</span>
-          <span class="date">2025.08.10</span>
-        </a>
-      </li>
+      {% endfor %}
     </ul>
   </section>
 </main>
-
-<footer class="mt-16 text-sm color-secondary text-center">
-  © 2025 INTHEVIBEDEV · Powered by 11ty · <a href="https://astro-chiri.netlify.app/">Chiri Theme</a>
-</footer>

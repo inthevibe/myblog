@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm install
-      - run: npx @11ty/eleventy & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css 
+      - run: npx @11ty/eleventy & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
