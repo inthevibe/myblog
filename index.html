@@ -2,26 +2,24 @@
 layout: layout.html
 ---
 
-<main class="space-y-6">
-  <section class="mb-12">
-    <p class="text-justify">
-      I’m a Computer Science student and web developer, passionate about tech since I was a kid. I’m enthusiastic about
-      programming in general. When I’m not coding, I’m usually watching programming talks on YouTube, binging videos
-      from Primeagen, or watching stuff about hardware, gaming, and benchmarks. This blog is my space to share what I’m
-      learning, my interests, and to practice writing better along the way.
-    </p>
-  </section>
+<section class="mb-12">
+  <p class="text-justify">
+    I’m a Computer Science student and web developer, passionate about tech since I was a kid. I’m enthusiastic about
+    programming in general. When I’m not coding, I’m usually watching programming talks on YouTube, binging videos
+    from Primeagen, or watching stuff about hardware, gaming, and benchmarks. This blog is my space to share what I’m
+    learning, my interests, and to practice writing better along the way.
+  </p>
+</section>
 
-  <section>
-    <ul class="space-y-6 mt-12">
-      {% for post in collections.post %}
-      <li>
-        <a class="flex justify-between" href="{{ post.url }}">
-          <span>{{ post.data.title }}</span>
-          <span class="date"> {{ post.data.date | date: "%B %d, %Y" }}</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-</main>
+<section>
+  <ul class="space-y-6 mt-12">
+    {% for post in collections.post %}
+    <li>
+      <a class="flex justify-between" href="{{ post.url }}">
+        <span>{{ post.data.title }}</span>
+        <span class="date"> {{ post.data.date | date: "%B %d, %Y" }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
