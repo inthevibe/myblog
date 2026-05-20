@@ -7,7 +7,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify && npx @11ty/eleventy",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css && (npx @11ty/eleventy --serve & npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch)"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
